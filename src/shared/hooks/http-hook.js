@@ -25,6 +25,8 @@ const useHttpClient = () => {
                 );
 
                 if (!response.ok) {
+                    setIsLoading(false);
+                    setError(responseData.message);
                     throw new Error(responseData.message);
                 }
                 setIsLoading(false);
