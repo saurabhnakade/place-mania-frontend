@@ -8,6 +8,13 @@ const NavLinks = () => {
 
     return (
         <ul className="nav-links">
+            {auth.isLoggedIn && (
+                <li>
+                    <NavLink to="/" exact>
+                        {auth.name}
+                    </NavLink>
+                </li>
+            )}
             <li>
                 <NavLink to="/" exact>
                     All USERS

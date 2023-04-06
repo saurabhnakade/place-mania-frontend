@@ -1,20 +1,22 @@
-import React, { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from "react";
 
 let logoutTimer;
 
 const useAuth = () => {
     const [token, setToken] = useState(null);
     const [userId, setUserId] = useState(null);
+    const [name, setName] = useState(null);
     const [tokenExpirationDate, setTokenExpirationDate] = useState();
 
-    const login = useCallback((uid, token, expirationDate) => {
+    const login = useCallback((uid, token, name, expirationDate) => {
         setToken(token);
         setUserId(uid);
+        setName(name);
 
         //new date for first time login
         //expirationDate for all subsequent refreshes of the browser and to still keep user logged in
         const tokenExpirationDate =
-            expirationDate || new Date(new Date().getTime() + 1000*60*60);
+            expirationDate || new Date(new Date().getTime() + 1000 * 60 * 60);
         setTokenExpirationDate(tokenExpirationDate);
         localStorage.setItem(
             "userData",
@@ -22,6 +24,7 @@ const useAuth = () => {
                 userId: uid,
                 token: token,
                 expiration: tokenExpirationDate.toISOString(),
+                name:name,
             })
         );
     }, []);
@@ -52,12 +55,13 @@ const useAuth = () => {
             login(
                 storedData.userId,
                 storedData.token,
+                storedData.name,
                 new Date(storedData.expiration)
             );
         }
-    }, [login]);
+    }, [login, name]);
 
-    return {token,login,logout,userId}
-}
+    return { token, login, logout, userId ,name};
+};
 
-export default useAuth
+export default useAuth;
