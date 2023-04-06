@@ -11,8 +11,8 @@ import {
     VALIDATOR_MINLENGTH,
     VALIDATOR_REQUIRE,
 } from "../../shared/util/validators";
-import  useForm  from "../../shared/hooks/form-hook";
-import  useHttpClient  from "../../shared/hooks/http-hook";
+import useForm from "../../shared/hooks/form-hook";
+import useHttpClient from "../../shared/hooks/http-hook";
 import AuthContext from "../../shared/context/auth-context";
 import "./Auth.css";
 
@@ -68,8 +68,6 @@ const Auth = () => {
     const authSubmitHandler = async (event) => {
         event.preventDefault();
 
-        console.log(formState.inputs);
-
         if (isLoginMode) {
             try {
                 const responseData = await sendRequest(
@@ -83,15 +81,15 @@ const Auth = () => {
                         "Content-Type": "application/json",
                     }
                 );
-                auth.login(responseData.user.id);
+                auth.login(responseData.userId,responseData.token);
             } catch (err) {}
         } else {
             try {
-                const formData=new FormData();
-                formData.append('name', formState.inputs.name.value)
-                formData.append('email', formState.inputs.email.value)
-                formData.append('password', formState.inputs.password.value)
-                formData.append('image', formState.inputs.image.value)
+                const formData = new FormData();
+                formData.append("name", formState.inputs.name.value);
+                formData.append("email", formState.inputs.email.value);
+                formData.append("password", formState.inputs.password.value);
+                formData.append("image", formState.inputs.image.value);
                 const responseData = await sendRequest(
                     "http://localhost:5000/api/users/signup",
                     "POST",
@@ -100,13 +98,13 @@ const Auth = () => {
                     //     email: formState.inputs.email.value,
                     //     password: formState.inputs.password.value,
                     // }),
-                    formData, //no need to add headers
+                    formData //no need to add headers
                     // {
                     //     "Content-Type": "application/json",
                     // }
                 );
 
-                auth.login(responseData.user.id);
+                auth.login(responseData.userId,responseData.token);
             } catch (err) {}
         }
     };
@@ -131,7 +129,12 @@ const Auth = () => {
                         />
                     )}
                     {!isLoginMode && (
-                        <ImageUpload center id="image" onInput={inputHandler}  errorText="Please Provide an Image" />
+                        <ImageUpload
+                            center
+                            id="image"
+                            onInput={inputHandler}
+                            errorText="Please Provide an Image"
+                        />
                     )}
                     <Input
                         element="input"
