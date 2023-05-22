@@ -35,7 +35,7 @@ const MainNavigation = () => {
                     <span></span>
                     <span></span>
                 </button>
-                <h1 className="main-navigation__title">
+                <h1 className="main-navigation__title" style={{padding:'20px'}}>
                     <Link to="/">PlaceMania</Link>
                 </h1>
                 <nav className="main-navigation__header-nav">

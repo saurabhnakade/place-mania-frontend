@@ -30,13 +30,15 @@ const UserPlaces = () => {
 
     return (
         <React.Fragment>
-            <ErrorModal error={error} onClear={clearError} />
+            {/* <ErrorModal error={error} onClear={clearError} /> */}
+            {}
             {isLoading && (
                 <div className="center">
                     <LoadingSpinner />
                 </div>
             )}
             {!isLoading && loadedPlaces && <PlaceList items={loadedPlaces} onDeletePlace={placeDeleteHandler}/>}
+            {!loadedPlaces && <h1 style={{display:'flex',justifyContent:'center'}}>No places for this user are present</h1>}
         </React.Fragment>
     );
 };
