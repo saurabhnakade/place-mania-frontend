@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+# Place Mania
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a web application which allows the travelling enthusiasts to share the places they visited with each other .<br/>
+Tech Stack used is MERN stack <br/>
+React JS for frontend <br/>
+NodeJS , ExpressJS to build the backend of the project <br/>
+MongoDB Atlas for storing the data <br/>
 
-## Available Scripts
+## HomePage
+<img width="1680" alt="Screenshot 2023-06-02 at 5 37 58 PM" src="https://github.com/saurabhnakade/place-mania-frontend/assets/87941414/b7fee79d-ffb2-405d-b82b-6f9d1fc8b013">
 
-In the project directory, you can run:
+## Login , SignUp
+<img width="1678" alt="Screenshot 2023-06-02 at 5 53 06 PM" src="https://github.com/saurabhnakade/place-mania-frontend/assets/87941414/c243d23f-5bc8-4124-8121-6348a6e5bc6e">
+<img width="1680" alt="Screenshot 2023-06-02 at 5 55 21 PM" src="https://github.com/saurabhnakade/place-mania-frontend/assets/87941414/064d2ea2-3459-42b8-9bcc-0e34649268a5">
 
-### `npm start`
+## Logged in As Saurabh Nakade
+<img width="1680" alt="Screenshot 2023-06-02 at 5 38 26 PM" src="https://github.com/saurabhnakade/place-mania-frontend/assets/87941414/24c98ff3-3754-40e5-8a95-76166c584c3e">
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Add a Place
+<img width="1680" alt="Screenshot 2023-06-02 at 5 43 58 PM" src="https://github.com/saurabhnakade/place-mania-frontend/assets/87941414/df8cb8e0-748f-4284-b678-be2645fe1ed4">
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## My Places
+<img width="1680" alt="Screenshot 2023-06-02 at 5 45 31 PM" src="https://github.com/saurabhnakade/place-mania-frontend/assets/87941414/6b6673df-4969-4dc6-b3ab-6a3b05867419">
 
-### `npm test`
+## Update Place
+<img width="1679" alt="Screenshot 2023-06-02 at 5 38 44 PM" src="https://github.com/saurabhnakade/place-mania-frontend/assets/87941414/08542d38-b27a-4e92-9c3e-82afff9e55cf">
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Delete Place
+<img width="1680" alt="Screenshot 2023-06-02 at 5 38 54 PM" src="https://github.com/saurabhnakade/place-mania-frontend/assets/87941414/61ca10a2-b7e4-43ce-afc2-7d802986822f">
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Other's Places
+<img width="1680" alt="Screenshot 2023-06-02 at 5 39 32 PM" src="https://github.com/saurabhnakade/place-mania-frontend/assets/87941414/bba3d5f3-e795-4965-8954-fa8f1af44e3f">
